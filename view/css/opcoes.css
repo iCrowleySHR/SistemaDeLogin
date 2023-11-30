@@ -1,4 +1,4 @@
-section {
+.opcoes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@ section {
   transition: 300ms;
   flex-direction: column;
 }
-section a {
+.opcoes a {
   color: #212121;
   font-size: 27px;
   font-weight: 700;
@@ -19,6 +19,6 @@ section a {
   text-decoration: none;
   transition: 300ms;
 }
-section a:hover {
+.opcoes a:hover {
   transform: scale(1.2);
 }/*# sourceMappingURL=opcoes.css.map */

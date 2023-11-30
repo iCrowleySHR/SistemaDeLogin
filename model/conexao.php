@@ -14,5 +14,9 @@ class conexao{
         }
     }
 
+    public function inserirUsuario(){
+        echo"olaaa";
+    }
+
 }
 ?>

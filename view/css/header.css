@@ -6,4 +6,14 @@ header {
   justify-content: center;
   align-items: center;
   height: 75px;
+}
+header h1 a {
+  text-decoration: none;
+  color: white;
+}
+header h1 a:hover {
+  transform: scale(1.2);
+  font-size: 32px;
+  -webkit-text-decoration: double;
+          text-decoration: double;
 }/*# sourceMappingURL=header.css.map */

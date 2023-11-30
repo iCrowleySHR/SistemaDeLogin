@@ -7,4 +7,16 @@ header{
     justify-content: center;
     align-items: center;
     height: 75px;
+    h1{
+        a{
+            text-decoration: none;
+            color: $white;
+
+            &:hover{
+                transform: scale(1.2);
+                font-size: 32px;
+                text-decoration: double;
+            }
+        }
+    }
 }
