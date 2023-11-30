@@ -1,0 +1,23 @@
+@import '_variaveis';
+footer{
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    
+    strong{
+        a{
+            text-decoration: underline;
+            color: $white;
+            transition: 300ms;
+
+            &:hover{
+                font-size: 18px;
+            }
+        }
+        
+    }
+}

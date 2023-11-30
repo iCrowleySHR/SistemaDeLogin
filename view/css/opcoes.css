@@ -1,0 +1,24 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+  margin-top: 120px;
+  transition: 300ms;
+  flex-direction: column;
+}
+section a {
+  color: #212121;
+  font-size: 27px;
+  font-weight: 700;
+  transition: 300ms;
+  margin: 15px;
+  opacity: 1;
+  transform: scale(1);
+  text-decoration: none;
+  transition: 300ms;
+}
+section a:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=opcoes.css.map */

@@ -1,0 +1,17 @@
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  background-color: #212121;
+  color: white;
+}
+footer strong a {
+  text-decoration: underline;
+  color: white;
+  transition: 300ms;
+}
+footer strong a:hover {
+  font-size: 18px;
+}/*# sourceMappingURL=footer.css.map */
