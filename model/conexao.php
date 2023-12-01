@@ -14,9 +14,24 @@ class conexao{
         }
     }
 
-    public function inserirUsuario(){
-        echo"olaaa";
+    public function inserirUsuario($cadNome,$cadSenha,$cadEmail){
+        $insereUsuario = $this -> pdo -> prepare("insert into usuario(nome,senha,email) VALUES(:nome,:senha,:email);");
+        $insereUsuario->bindValue(":nome",$cadNome);
+        $insereUsuario->bindValue(":senha",$cadSenha);
+        $insereUsuario->bindValue(":email",$cadEmail);
+        $insereUsuario->execute();
     }
 
+    public function validarAcesso($sql){
+        $consultaBanco = $this -> pdo -> query($sql);
+        $resultado = array();
+        while($resultado = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
+            if ($resultado !== false) {
+                return true;
+            } else{
+                return false;
+            }
+        }
+    }
 }
 ?>

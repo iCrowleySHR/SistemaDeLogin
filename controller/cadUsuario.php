@@ -8,6 +8,8 @@
         $cadSenha = $_POST['password'];
         $cadEmail = $_POST['email'];
 
-        $conexao -> inserirUsuario();
+        $conexao -> inserirUsuario($cadNome,$cadSenha,$cadEmail);
+
+        echo"Conta criada!";
     }    
 ?>

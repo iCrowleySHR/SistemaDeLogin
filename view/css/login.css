@@ -1,0 +1,19 @@
+form section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 45px;
+}
+form label {
+  margin-left: -130px;
+}
+form input {
+  outline: none;
+  padding: 7px;
+  border-radius: 3px;
+}
+form button {
+  width: 187px;
+  margin: 5px;
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,21 @@
+form{
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 45px;
+    }
+    label{
+        margin-left: -130px;
+    }
+    input{
+        outline: none;
+        padding: 7px;
+        border-radius: 3px;
+    }
+    button{
+        width: 187px;
+        margin: 5px;
+    }
+}

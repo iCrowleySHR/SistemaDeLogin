@@ -1,9 +1,7 @@
-<?php include '../../controller/cadUsuario.php'; ?>
+<?php include '../../controller/login.php'; ?>
 <form action="" method='post'>
     <section>
-        <h2>Cadastre-se no nosso site!</h2>
-        <label for="name">Nome</label>
-        <input type="text" name="name" required maxlength="100"> 
+        <h2>Acesse a sua conta!</h2>
         <label for="email">E-mail</label>
         <input type="text" name="email" required maxlength="100" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
         <label for="senha">Senha</label>
