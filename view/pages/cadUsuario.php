@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/cadUsuario.css">
-    <script src="../script/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <?php require '../components/header.php';?>

@@ -1,19 +1,14 @@
 header {
-  width: 100%;
-  background-color: #212121;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #212121;
   height: 75px;
 }
-header h1 a {
+header a {
+  margin-left: 10px;
+  font-weight: 800;
+  font-size: 35px;
   text-decoration: none;
   color: white;
-}
-header h1 a:hover {
-  transform: scale(1.2);
-  font-size: 32px;
-  -webkit-text-decoration: double;
-          text-decoration: double;
 }/*# sourceMappingURL=header.css.map */

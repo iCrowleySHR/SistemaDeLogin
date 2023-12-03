@@ -26,9 +26,9 @@ class conexao{
         $consultaBanco = $this -> pdo -> query($sql);
         $resultado = array();
         while($resultado = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
-            if ($resultado !== false) {
+            if ($resultado !== false) { // Usuario existe
                 return true;
-            } else{
+            } else{ //Usuario não existe
                 return false;
             }
         }
