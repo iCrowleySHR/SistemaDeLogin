@@ -1,10 +1,7 @@
 <?php
-    require_once("bancoConexao.php");
+    require("bancoConexao.php");
     session_start();
-    if($_SESSION["nome"]){
+    if(isset($_SESSION["nome"])){
         header("Location:home.php");
-        exit();
-    } else{
-        
     }
 ?>

@@ -1,0 +1,51 @@
+@import '_variaveis';
+@import 'btn.scss';
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    .inicio-infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      box-shadow: $shadow;
+      border-radius: 25px;
+      width: 350px;
+      height: 250px;
+      margin-top: 50px;
+  
+      h1 {
+        margin: 0;
+      }
+  
+      p {
+        margin: 0;
+      }
+    }
+  
+    .user-opcoes {
+        display: flex;
+        margin: 20px;
+
+        label{
+            margin: 10px;
+            font-weight: 700;
+        }
+        button{
+            @extend .btnPrimary;
+
+            &:last-child{
+                background-color: $red;
+
+                &:hover{
+                    color: $red;
+                    background-color: transparent;
+                }
+            }
+        }
+        
+      }
+  }
+  

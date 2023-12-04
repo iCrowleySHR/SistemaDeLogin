@@ -1,7 +1,6 @@
 <?php
   require_once("bancoConexao.php");
-  session_start();
-  require "verificaSessao.php";
+  require("verificaSessao.php");
   if($_SERVER['REQUEST_METHOD'] =='POST'){
     $senha = $_POST['password'];
     $email = $_POST['email'];
@@ -14,22 +13,13 @@
         session_start();
         $sql = "select * from usuario where email = '$email'";
         $resultado = $conexao -> consultaBanco($sql);
+
         $_SESSION["nome"] = $resultado["nome"];
         $_SESSION["email"] = $resultado["email"];
 
-        header("Location: home.php");
-        echo'
-        <script>
-        Swal.fire({
-            title: "Usuário encontrado",
-            text: "Ai sim hein campeão!!",
-            icon: "success",
-            color:"white",
-            position:"center",
-            background:"#212121"
-        });
-        </script>
-        ';
+        header("Location: ../pages/home.php");
+        exit();
+        
         } else {
         echo '
         <script>

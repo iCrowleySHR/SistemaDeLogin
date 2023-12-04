@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.btnPrimary, main .user-opcoes button {
+  background-color: rgb(1, 105, 190);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 13px;
+  height: 40px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 400ms;
+  font-weight: 600;
+  margin: 0 10px 10px 0;
+}
+.btnPrimary:hover, main .user-opcoes button:hover {
+  color: #212121;
+  background-color: transparent;
+  border: solid 1px black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .inicio-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+}
+main .inicio-infos h1 {
+  margin: 0;
+}
+main .inicio-infos p {
+  margin: 0;
+}
+main .user-opcoes {
+  display: flex;
+  margin: 20px;
+}
+main .user-opcoes label {
+  margin: 10px;
+  font-weight: 700;
+}
+main .user-opcoes button:last-child {
+  background-color: #c41414;
+}
+main .user-opcoes button:last-child:hover {
+  color: #c41414;
+  background-color: transparent;
+}/*# sourceMappingURL=home.css.map */
