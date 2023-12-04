@@ -33,5 +33,13 @@ class conexao{
             }
         }
     }
+
+    public function consultaBanco($sql){
+        $consultaBanco = $this -> pdo -> query($sql);
+        $resultado = array();
+        while($resultado = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
+            return $resultado;
+        }
+    }
 }
 ?>
