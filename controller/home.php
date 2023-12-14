@@ -9,7 +9,10 @@
                     session_destroy();
                     header('Location: ../../index.php');
                     break;
-                case 'apagar':
+                case 'editarEmail':
+                    $novoEmail = $_POST['editarEmail'];
+                    var_dump($novoEmail);
+                    break;
             }
         }
     } else{

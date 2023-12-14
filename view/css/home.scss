@@ -34,6 +34,7 @@ main {
               margin: 10px;
               font-weight: 700;
           }
+
           button{
               @extend .btnPrimary;
 
@@ -45,18 +46,87 @@ main {
                       background-color: transparent;
                   }
               }
-              &:nth-child(6){
-                background-color: $red;
-                margin-bottom: 75px;
+          }
 
-                  &:hover{
-                      color: $red;
-                      background-color: transparent;
-                  }
+          form{
+            button{
+              background-color: $red;
+
+              &:hover{
+                color: $red;
+                background-color: transparent;
               }
+            }
           }
       }
+
+      .editar-dados{
+        display: flex;
+        justify-content: center;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        margin: 0 25px 75px 25px;
+        max-width: 450px;
+        width: 100%;
+
+        form{
+          display: flex;
+          background-color: white;
+          width: 98%;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          box-shadow: $shadow;
+          border-radius: 15px;
+          padding: 20px;
+
+            input{
+              display: flex;
+              border-radius: 3px;
+              outline: none;
+              padding: 7px 85px 7px 7px
+            }
+
+            button{
+              @extend .btnPrimary;
+              height: 25px;
+              width: 25px;
+              margin-bottom: 0px;
+              margin-top: 10px;
+              border-radius: 5px;
+              background-color: rgb(1, 134, 1);
+              border: none;
+
+              &:hover{
+                color: white;
+                background-color: rgb(3, 163, 3);
+              }
+            }
+        }      
+    }
   }
+
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
 
   @media screen and (max-width:622px) {
     .user-opcoes{

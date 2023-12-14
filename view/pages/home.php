@@ -24,14 +24,17 @@
                 </strong>
             </p>
         </section>
-            <section class="user-opcoes">
-                <label>Opções:</label>
-                    <button class="btn" id="editar-email">Editar Email</button>
-                    <button class="btn" type="submit" id="editar-senha" >Editar Senha</button>
-                    <button class="btn" type="submit" id="editar-nome">Editar Nome</button>
-                    <button class="btn" type="submit" id="apagar-conta">Apagar Conta</button>
-                    <button class="btn" type="submit" name="acao" value="sair">Sair da Conta</button>
-            </section> 
+
+        <section class="user-opcoes">
+            <label>Opções:</label>
+                <button id="editar-email">Editar Email</button>
+                <button id="editar-senha" >Editar Senha</button>
+                <button id="editar-nome">Editar Nome</button>
+                <button id="apagar-conta">Apagar Conta</button>
+                <form method="post">
+                    <button type="submit" name="acao" value="sair">Sair da Conta</button>
+                </form>
+        </section>
     </main>
     <?php require '../components/footer.php'; ?>
 </body>

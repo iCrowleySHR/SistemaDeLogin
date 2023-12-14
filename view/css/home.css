@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.btnPrimary, main .user-opcoes button {
+.btnPrimary, main .editar-dados form button, main .user-opcoes button {
   background-color: rgb(1, 105, 190);
   color: white;
   display: flex;
@@ -16,7 +16,7 @@
   font-weight: 600;
   margin: 0 10px 10px 0;
 }
-.btnPrimary:hover, main .user-opcoes button:hover {
+.btnPrimary:hover, main .editar-dados form button:hover, main .user-opcoes button:hover {
   color: #212121;
   background-color: transparent;
   border: solid 1px black;
@@ -62,15 +62,59 @@ main .user-opcoes button:nth-child(5):hover {
   color: #c41414;
   background-color: transparent;
 }
-main .user-opcoes button:nth-child(6) {
+main .user-opcoes form button {
   background-color: #c41414;
-  margin-bottom: 75px;
 }
-main .user-opcoes button:nth-child(6):hover {
+main .user-opcoes form button:hover {
   color: #c41414;
   background-color: transparent;
 }
-
+main .editar-dados {
+  display: flex;
+  justify-content: center;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  margin: 0 25px 75px 25px;
+  max-width: 450px;
+  width: 100%;
+}
+main .editar-dados form {
+  display: flex;
+  background-color: white;
+  width: 98%;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 20px;
+}
+main .editar-dados form input {
+  display: flex;
+  border-radius: 3px;
+  outline: none;
+  padding: 7px 85px 7px 7px;
+}
+main .editar-dados form button {
+  height: 25px;
+  width: 25px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(1, 134, 1);
+  border: none;
+}
+main .editar-dados form button:hover {
+  color: white;
+  background-color: rgb(3, 163, 3);
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media screen and (max-width: 622px) {
   .user-opcoes {
     flex-wrap: wrap;
