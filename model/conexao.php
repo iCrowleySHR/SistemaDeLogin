@@ -36,13 +36,13 @@ class conexao{
 
     public function consultaBanco($sql){
         $consultaBanco = $this -> pdo -> query($sql);
-        $resultados = array();
+        $resultado = array();
 
-        while($resultado = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
-            $resultados[] = $resultado;
+        while($resultados = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
+            $resultado[] = $resultados;
         }
         
-        return $resultados;
+        return $resultado;
     }
 }
 ?>

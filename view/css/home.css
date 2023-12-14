@@ -36,7 +36,8 @@ main .inicio-infos {
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 25px;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 250px;
   margin-top: 50px;
 }
@@ -48,16 +49,30 @@ main .inicio-infos p {
 }
 main .user-opcoes {
   display: flex;
-  margin: 20px;
+  margin: 10px;
 }
 main .user-opcoes label {
   margin: 10px;
   font-weight: 700;
 }
-main .user-opcoes button:last-child {
+main .user-opcoes button:nth-child(5) {
   background-color: #c41414;
 }
-main .user-opcoes button:last-child:hover {
+main .user-opcoes button:nth-child(5):hover {
   color: #c41414;
   background-color: transparent;
+}
+main .user-opcoes button:nth-child(6) {
+  background-color: #c41414;
+  margin-bottom: 75px;
+}
+main .user-opcoes button:nth-child(6):hover {
+  color: #c41414;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 622px) {
+  .user-opcoes {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=home.css.map */
