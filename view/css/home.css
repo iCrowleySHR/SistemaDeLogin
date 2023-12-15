@@ -116,7 +116,17 @@ main .editar-dados form button:hover {
   }
 }
 @media screen and (max-width: 622px) {
+  main .editar-dados {
+    margin: -40px 25px 75px 25px;
+  }
   .user-opcoes {
     flex-wrap: wrap;
+  }
+  .user-opcoes form {
+    width: 98%;
+    flex-wrap: wrap;
+  }
+  .user-opcoes form button {
+    margin-bottom: 50px;
   }
 }/*# sourceMappingURL=home.css.map */
