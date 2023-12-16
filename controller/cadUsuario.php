@@ -8,33 +8,9 @@
         $sql = "select * from usuario where email = '$cadEmail'" ;
         $usuarioExiste = $conexao -> validarAcesso($sql);
 
-        if($usuarioExiste == true){ //Usuario já existe
-            echo '
-            <script>
-            Swal.fire({
-                title: "Problemas para criar conta",
-                text: "Email já está sendo usado no momento.",
-                icon: "error",
-                color:"white",
-                position:"center",
-                background:"#212121"
-            });
-            </script>
-            ';
-        } else{ //Usuario não existente no sistema
+        if($usuarioExiste == false){
             $conexao -> inserirUsuario($cadNome,$cadSenha,$cadEmail);
-            echo'
-            <script>
-            Swal.fire({
-                title: "Conta Criada!!!",
-                text: "Acesse ela na página Login",
-                icon: "success",
-                color:"white",
-                position:"center",
-                background:"#212121"
-            });
-            </script>
-            ';
+            $contaCriada = true;
         }
     }    
 ?>

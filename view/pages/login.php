@@ -12,6 +12,22 @@
 <body>
     <?php require '../components/header.php';?>
     <?php require '../components/inputLogin.php' ?>
+    <?php
+        if(isset($erroEncontrado) && $erroEncontrado == true){
+            echo '
+            <script>
+                Swal.fire({
+                    title: "Usuario não encontrado",
+                    text: "Email ou senha incorreto",
+                    icon: "error",
+                    color:"white",
+                    position:"center",
+                    background:"#212121"
+                });
+            </script>
+            ';
+        }
+    ?>
     <?php require '../components/footer.php'; ?>
 </body>
 </html>

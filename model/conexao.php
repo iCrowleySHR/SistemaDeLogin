@@ -58,10 +58,11 @@ class conexao{
         $alteraEmail->execute();
     }
 
-    public function alteraSenha($novaSenha, $idUsuario){
+    public function alteraSenha($senhaNova,$idUsuario){
         $alteraSenha = $this -> pdo -> prepare("UPDATE usuario SET senha = :novaSenha WHERE codUsuario = :id;");
-        $alteraSenha->bindValue(":novaSenha",$novaSenha);
+        $alteraSenha->bindValue(":novaSenha",$senhaNova);
         $alteraSenha->bindValue("id",$idUsuario);
+        $alteraSenha->execute();
     }
 }
 ?>

@@ -6,12 +6,12 @@
     <title>Acessou</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
-    <script defer src="../js/home.js"></script>]
-
+    <script defer src="../js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <?php require '../components/header.php';?>
-    <?php require '../../controller/home.php'; ?>
+    <?php include '../../controller/home.php' ?>
     <main>
         <section class="inicio-infos">
             <h1>
@@ -44,15 +44,15 @@
         <?php
             if (isset($senhaAltera) && $senhaAltera == true) {
                 echo '
-                <script>
-            Swal.fire({
-                title: "Usuario não encontrado",
-                text: "Email ou senha incorreto",
-                icon: "error",
-                color:"white",
-                position:"center",
-                background:"#212121"
-            });
+            <script>
+                Swal.fire({
+                    title: "Aviso!",
+                    text: "Senha alterada com sucesso",
+                    icon: "success",
+                    color:"white",
+                    position:"center",
+                    background:"#212121"
+                });
             </script>
                 ';
             }

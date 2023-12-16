@@ -36,6 +36,7 @@
                         }
 
                         if($senhaUsuarioBanco == $senhaAtual){
+                            $conexao -> alteraSenha($senhaNova,$idUsuario);
                             $senhaAltera= true;
                         }else{
 

@@ -23,18 +23,7 @@
         header("Location: home.php");
         exit();
         } else {
-        echo '
-        <script>
-        Swal.fire({
-            title: "Usuario não encontrado",
-            text: "Email ou senha incorreto",
-            icon: "error",
-            color:"white",
-            position:"center",
-            background:"#212121"
-        });
-        </script>
-        ';
+          $erroEncontrado = true;
     }
   }    
 ?>
