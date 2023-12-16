@@ -41,8 +41,27 @@ class conexao{
         while($resultados = $consultaBanco -> fetch(PDO::FETCH_ASSOC)){
             $resultado[] = $resultados;
         }
-        
         return $resultado;
+    }
+
+    public function alteraNome($novoNome,$idUsuario){
+        $alteraNome = $this -> pdo -> prepare("UPDATE usuario SET nome = :novoNome WHERE codUsuario = :id;");
+        $alteraNome->bindValue(":novoNome",$novoNome);
+        $alteraNome->bindValue(":id",$idUsuario);
+        $alteraNome->execute();
+    }
+
+    public function alteraEmail($novoEmail, $idUsuario){
+        $alteraEmail = $this -> pdo -> prepare("UPDATE usuario SET email = :novoEmail WHERE codUsuario = :id;");
+        $alteraEmail->bindValue(":novoEmail",$novoEmail);
+        $alteraEmail->bindValue(":id",$idUsuario);
+        $alteraEmail->execute();
+    }
+
+    public function alteraSenha($novaSenha, $idUsuario){
+        $alteraSenha = $this -> pdo -> prepare("UPDATE usuario SET senha = :novaSenha WHERE codUsuario = :id;");
+        $alteraSenha->bindValue(":novaSenha",$novaSenha);
+        $alteraSenha->bindValue("id",$idUsuario);
     }
 }
 ?>

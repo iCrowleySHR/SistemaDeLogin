@@ -17,6 +17,7 @@
         foreach($resultado as $dados){
           $_SESSION["nome"] = $dados["nome"];
           $_SESSION["email"] = $dados["email"];
+          $_SESSION["id"] = $dados["codUsuario"];
         }
     
         header("Location: home.php");

@@ -3,14 +3,18 @@ let editarSenha = document.querySelector('#editar-senha')
 let editarNome = document.querySelector('#editar-nome')
 let main = document.querySelector('main')
 
-let section = document.createElement('section')
-let label = document.createElement('label')
-let input = document.createElement('input')
-let button = document.createElement('button')
-let form = document.createElement('form')
-let span = document.createElement('span')
+const section = document.createElement('section')
+const label = document.createElement('label')
+const input = document.createElement('input')
+const button = document.createElement('button')
+const form = document.createElement('form')
+const span = document.createElement('span')
+const inputSenhanova = document.createElement('input')
+const labelSenhanova = document.createElement('label')
 
 editarEmail.addEventListener('click',()=>{
+    inputSenhanova.remove()
+    labelSenhanova.remove()
 
     main.appendChild(section)
     form.method='post'
@@ -41,7 +45,8 @@ editarEmail.addEventListener('click',()=>{
 
     input.addEventListener('input', ()=>{
         let inputValue = input.value
-        if(!inputValue.includes('@')){
+        let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if(!emailRegex.test(inputValue) && button.value == "editarEmail" ){
             span.style.color='red'
             span.innerHTML=`Email invalido!`
             button.style.backgroundColor='gray'
@@ -55,6 +60,11 @@ editarEmail.addEventListener('click',()=>{
 })
 
 editarNome.addEventListener('click',()=>{
+    span.remove()
+    button.style.backgroundColor=''
+    button.disabled = false
+    inputSenhanova.remove()
+    labelSenhanova.remove()
 
     main.appendChild(section)
     form.method='post'
@@ -80,6 +90,40 @@ editarNome.addEventListener('click',()=>{
     button.textContent='Alterar'
     button.type='submit'
     button.value='editarNome'
+    button.name='acao'
+    form.appendChild(button) 
+})
+
+editarSenha.addEventListener('click',()=>{
+    span.remove()
+    button.style.backgroundColor=''
+    button.disabled = false
+
+    main.appendChild(section)
+    form.method='post'
+    section.appendChild(form)
+    section.classList.add('editar-dados')
+
+    labelSenhanova.htmlFor='senhaAtual'
+    labelSenhanova.textContent='Digite sua senha atual:'
+    form.appendChild(labelSenhanova)
+
+    input.type='password'
+    input.name='senhaAtual'
+    input.value = ''
+    form.appendChild(input)
+
+    label.htmlFor='senhaNova'
+    label.textContent='Digite o sua nova senha:'
+    form.appendChild(label)
+
+    inputSenhanova.type='password'
+    inputSenhanova.name='senhaNova'
+    form.appendChild(inputSenhanova)
+
+    button.textContent='Alterar'
+    button.type='submit'
+    button.value='editarSenha'
     button.name='acao'
     form.appendChild(button) 
 })
