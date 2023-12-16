@@ -1,6 +1,7 @@
 let editarEmail = document.querySelector('#editar-email')
 let editarSenha = document.querySelector('#editar-senha')
 let editarNome = document.querySelector('#editar-nome')
+let apagarConta = document.querySelector('#apagar-conta')
 let main = document.querySelector('main')
 
 const section = document.createElement('section')
@@ -126,6 +127,10 @@ editarSenha.addEventListener('click',()=>{
     button.value='editarSenha'
     button.name='acao'
     form.appendChild(button) 
+})
+
+apagarConta.addEventListener('click', ()=>{
+    
 })
 
 

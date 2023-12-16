@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php require '../components/header.php';?>
-    <?php include '../../controller/home.php' ?>
+    <?php require '../../controller/home.php' ?>
     <main>
         <section class="inicio-infos">
             <h1>
@@ -41,18 +41,64 @@
                     <button type="submit" name="acao" value="sair">Sair da Conta</button>
                 </form>
         </section>
+        <section>
+                <article>
+                    Você tem certeza que deseja apagar a sua conta?
+                </article>
+        </section>
         <?php
-            if (isset($senhaAltera) && $senhaAltera == true) {
+            if (isset($emailAlterado) && $emailAlterado == true) {
                 echo '
             <script>
                 Swal.fire({
-                    title: "Aviso!",
+                    title: "Email alterado!",
+                    text: "Email alterado com sucesso",
+                    icon: "success",
+                    color:"white",
+                    position:"center",
+                    background:"#212121"
+                });
+            </script>
+                ';
+            }
+            if (isset($nomeAlterado) && $nomeAlterado == true) {
+                echo '
+            <script>
+                Swal.fire({
+                    title: "Nome alterado!",
+                    text: "Nome alterado com sucesso",
+                    icon: "success",
+                    color:"white",
+                    position:"center",
+                    background:"#212121"
+                });
+            </script>
+                ';
+            }
+            if (isset($senhaAlterada) && $senhaAlterada == true) {
+                echo '
+            <script>
+                Swal.fire({
+                    title: "Senha alterada!",
                     text: "Senha alterada com sucesso",
                     icon: "success",
                     color:"white",
                     position:"center",
                     background:"#212121"
                 });
+            </script>
+                ';
+            }else if(isset($senhaAlterada) && $senhaAlterada == false){
+                echo '
+                <script>
+                    Swal.fire({
+                        title: "Aviso!",
+                        text: "Senha não alterada! Sua senha atual não está correta!",
+                        icon: "error",
+                        color:"white",
+                        position:"center",
+                        background:"#212121"
+                    });
             </script>
                 ';
             }

@@ -16,12 +16,14 @@
                     $novoEmail = $_POST["editarEmail"];
                     $conexao -> alteraEmail($novoEmail,$idUsuario);
                     $_SESSION["email"] = $novoEmail;
+                    $emailAlterado = true;
                     break;
 
                 case 'editarNome':
                     $novoNome = $_POST["editarNome"];
                     $conexao -> alteraNome($novoNome,$idUsuario);
                     $_SESSION["nome"] = $novoNome;
+                    $nomeAlterado = true;
                     break;
 
                 case "editarSenha":
@@ -37,9 +39,9 @@
 
                         if($senhaUsuarioBanco == $senhaAtual){
                             $conexao -> alteraSenha($senhaNova,$idUsuario);
-                            $senhaAltera= true;
+                            $senhaAlterada= true;
                         }else{
-
+                            $senhaAlterada= false;
                         }
                     
                     break;
