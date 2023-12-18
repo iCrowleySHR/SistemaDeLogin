@@ -59,7 +59,7 @@ body{
             display: flex; 
             flex-direction: column;
             border-top: solid black 2px;
-            margin-bottom: 100px;
+            
 
             article{
                 h2{
@@ -78,6 +78,7 @@ body{
                 img{
                     margin-top: -15px;
                     margin-left: 85px;
+                    margin-bottom: 100px; 
                 }
             }
         }

@@ -118,7 +118,6 @@ body main .tecnologias {
   display: flex;
   flex-direction: column;
   border-top: solid black 2px;
-  margin-bottom: 100px;
 }
 body main .tecnologias article h2 {
   animation: text-shadow-pop-br 0.6s both;
@@ -137,6 +136,7 @@ body main .tecnologias article h2::selection {
 body main .tecnologias article img {
   margin-top: -15px;
   margin-left: 85px;
+  margin-bottom: 100px;
 }
 @keyframes text-shadow-pop-br {
   0% {
