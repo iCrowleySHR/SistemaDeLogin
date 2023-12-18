@@ -45,6 +45,11 @@
                         }
                     
                     break;
+                case "deletarConta":
+                    $conexao -> deletarConta($idUsuario);
+                    session_destroy();
+                    header("Location: ../../index.php");
+                    break;
             }
         }
     } else{

@@ -8,7 +8,10 @@
 </head>
 <body>
     <?php require 'view/components/header.php'; ?>
-    <?php require 'view/components/opcoes.php'; ?> 
+    <?php require 'view/components/opcoes.php'; ?>
+    <section>
+        <h2>Sobre esse projeto!</h2>
+    </section>
     <?php require 'view/components/footer.php'; ?>
 </body>
 </html>

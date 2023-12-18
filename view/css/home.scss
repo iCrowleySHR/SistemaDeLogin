@@ -97,13 +97,34 @@ main {
               background-color: rgb(1, 134, 1);
               border: none;
 
-
               &:hover{
                 color: white;
                 background-color: rgb(3, 163, 3);
               }
             }
         }      
+    }
+
+    .deletar-conta{
+      article{
+        button{
+          @extend .btnPrimary;
+        }
+        form{
+          button{
+            @extend .btnPrimary;
+
+            &{
+              background-color: $red;
+            }
+
+            &hover{
+              color:$red;
+              background-color: white;
+            }
+          }
+        }
+      }
     }
   }
 

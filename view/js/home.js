@@ -130,7 +130,21 @@ editarSenha.addEventListener('click',()=>{
 })
 
 apagarConta.addEventListener('click', ()=>{
-    
+    section.style.display='none'
+    main.innerHTML+=`
+    <section class="deletar-conta">
+        <article>
+            Você tem certeza que deseja apagar a sua conta?
+            <form method="post">
+                <button type="submit" name="acao" value="deletarConta">Sim, eu concordo em apagar a conta!</button>
+            </form>
+                <button id="nao-deletarConta">Não</button>
+        </article>
+    </section>`
+    const btnNaoDeletar = document.querySelector('#nao-deletarConta')
+    btnNaoDeletar.addEventListener('click',()=>{
+        location.reload();
+    })
 })
 
 

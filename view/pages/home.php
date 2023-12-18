@@ -41,11 +41,7 @@
                     <button type="submit" name="acao" value="sair">Sair da Conta</button>
                 </form>
         </section>
-        <section>
-                <article>
-                    Você tem certeza que deseja apagar a sua conta?
-                </article>
-        </section>
+
         <?php
             if (isset($emailAlterado) && $emailAlterado == true) {
                 echo '

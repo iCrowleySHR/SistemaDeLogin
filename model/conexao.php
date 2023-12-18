@@ -64,5 +64,11 @@ class conexao{
         $alteraSenha->bindValue("id",$idUsuario);
         $alteraSenha->execute();
     }
+
+    public function deletarConta($idUsuario){
+        $deletarConta = $this -> pdo -> prepare("delete from usuario where codUsuario = :id");
+        $deletarConta->bindValue(":id",$idUsuario);
+        $deletarConta->execute();
+    }
 }
 ?>
