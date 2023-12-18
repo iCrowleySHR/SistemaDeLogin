@@ -88,10 +88,26 @@ body main .sobre article h2 {
   margin-right: 85px;
   font-size: 40px;
 }
+body main .sobre article h2::-moz-selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
+}
+body main .sobre article h2::selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
+}
 body main .sobre article p {
   font-size: 24px;
   margin: -25px 100px 0 100px;
   text-align: justify;
+}
+body main .sobre article p::-moz-selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
+}
+body main .sobre article p::selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
 }
 body main .sobre article p:after {
   content: "|";
@@ -109,6 +125,14 @@ body main .tecnologias article h2 {
   margin-left: 85px;
   margin-right: 85px;
   font-size: 40px;
+}
+body main .tecnologias article h2::-moz-selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
+}
+body main .tecnologias article h2::selection {
+  color: rgb(97, 35, 196);
+  background-color: rgba(19, 19, 19, 0.788);
 }
 body main .tecnologias article img {
   margin-top: -15px;

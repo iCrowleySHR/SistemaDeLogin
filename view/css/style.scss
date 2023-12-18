@@ -9,7 +9,9 @@ body{
     padding: 0;  
     font-family: 'Raleway', sans-serif; 
     @extend .background;
-    color: white; 
+    color: white;
+    
+   
         
     main{
         .sobre{
@@ -20,19 +22,28 @@ body{
             height: 280px;
 
             article{
-
+                
                 h2{
                     -webkit-animation: text-shadow-pop-br 0.6s both;
                     animation: text-shadow-pop-br 0.6s both;
                     margin-left: 85px;
                     margin-right: 85px;
                     font-size: 40px;
+                    &::selection{
+                        color: rgb(97, 35, 196);
+                        background-color: rgba(19, 19, 19, 0.788);
+                    }
                 }
     
                 p{
                     font-size: 24px;
                     margin: -25px 100px 0 100px;
                     text-align: justify;
+
+                    &::selection{
+                        color: rgb(97, 35, 196);
+                        background-color: rgba(19, 19, 19, 0.788);
+                    }
                 }
 
                 p:after{
@@ -57,6 +68,11 @@ body{
                     margin-left: 85px;
                     margin-right: 85px;
                     font-size: 40px;
+
+                    &::selection{
+                        color: rgb(97, 35, 196);
+                        background-color: rgba(19, 19, 19, 0.788);
+                    }
                 }
 
                 img{
