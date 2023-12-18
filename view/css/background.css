@@ -1,0 +1,7 @@
+.background {
+  background: rgb(12, 77, 128);
+  background: linear-gradient(28deg, rgb(12, 77, 128) 35%, rgb(235, 16, 211) 75%);
+  background-repeat: no-repeat;
+  background-size: auto;
+  min-height: 100vh;
+}/*# sourceMappingURL=background.css.map */

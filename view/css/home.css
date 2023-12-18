@@ -18,7 +18,7 @@
 }
 .btnPrimary:hover, main .deletar-conta article button:hover, main .editar-dados form button:hover, main .user-opcoes button:hover {
   color: #212121;
-  background-color: transparent;
+  background-color: white;
   border: solid 1px black;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
@@ -39,6 +39,8 @@ main .inicio-infos {
   max-width: 350px;
   width: 100%;
   height: 250px;
+  background-color: white;
+  color: black;
   margin-top: 50px;
 }
 main .inicio-infos h1 {
@@ -60,14 +62,14 @@ main .user-opcoes button:nth-child(5) {
 }
 main .user-opcoes button:nth-child(5):hover {
   color: #c41414;
-  background-color: transparent;
+  background-color: white;
 }
 main .user-opcoes form button {
   background-color: #c41414;
 }
 main .user-opcoes form button:hover {
   color: #c41414;
-  background-color: transparent;
+  background-color: white;
 }
 main .editar-dados {
   display: flex;
@@ -76,6 +78,7 @@ main .editar-dados {
   margin: 0 25px 75px 25px;
   max-width: 450px;
   width: 100%;
+  color: black;
 }
 main .editar-dados form {
   display: flex;
@@ -110,7 +113,7 @@ main .editar-dados form button:hover {
 main .deletar-conta article form button {
   background-color: #c41414;
 }
-main .deletar-conta article form buttonhover {
+main .deletar-conta article form button:hover {
   color: #c41414;
   background-color: white;
 }
