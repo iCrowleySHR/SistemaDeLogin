@@ -80,7 +80,6 @@ body main .sobre {
   display: flex;
   flex-direction: column;
   border-top: solid black 2px;
-  height: 280px;
 }
 body main .sobre article h2 {
   animation: text-shadow-pop-br 0.6s both;
@@ -154,5 +153,30 @@ body main .tecnologias article img {
   }
   50% {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  body main .sobre article h2 {
+    animation: text-shadow-pop-br 0.6s both;
+    text-align: center;
+    font-size: 32px;
+  }
+  body main .sobre article p {
+    margin: -25px 20px 0 20px;
+  }
+  body main .tecnologias article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  body main .tecnologias article h2 {
+    animation: text-shadow-pop-br 0.6s both;
+    font-size: 32px;
+    text-align: center;
+  }
+  body main .tecnologias article img {
+    width: 50%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

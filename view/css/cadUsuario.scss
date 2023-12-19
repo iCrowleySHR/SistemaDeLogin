@@ -1,21 +1,68 @@
-form{
-    section{
+@import '_variaveis';
+@import 'btn';
+main{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px 100px 50px;
+    .svg{
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        margin-top: 45px;
+        justify-content: center;
+        height: 600px;
+        background-color: white;
+        border-radius: 10px 0 0 10px;
+        svg{
+            width: 85%;
+        }
     }
-    label{
-        margin-left: -130px;
+    form{
+        background-color: black;
+        box-shadow: $shadow;
+        width: 330px;
+        height: 600px;
+        border-radius: 0 10px 10px 0;
+        section{
+            display: grid;
+            justify-content: center;
+            margin-top: 45px;
+
+            h2{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            label{
+                margin: 2px;
+            }
+            input{
+                outline: none;
+                width: 95%;
+                height: 30px;
+                border: none;
+                border-radius: 3px;
+                margin: 2px;
+            }
+            button{
+                @extend .btnPrimary;
+                margin: 5px 0 0 0;
+                height: 25px;
+                width: 98%;
+                border-radius: 5px;
+            }
+            .olho{
+                width: 40px;
+                justify-self: flex-end;
+                margin-top: -38px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        
     }
-    input{
-        outline: none;
-        padding: 7px;
-        border-radius: 3px;
-    }
-    button{
-        width: 185px;
-        margin: 5px;
+}
+@media screen and (max-width:834px) {
+    .svg{
+        display: none;
+        background-color: aqua;
     }
 }
