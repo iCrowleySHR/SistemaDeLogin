@@ -51,6 +51,7 @@ main form section {
   display: grid;
   justify-content: center;
   margin-top: 45px;
+  width: 330px;
 }
 main form section h2 {
   white-space: nowrap;
