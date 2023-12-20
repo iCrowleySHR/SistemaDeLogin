@@ -64,3 +64,14 @@ main{
         }
     }
 }
+@media screen and (max-width:558px) {
+    main{
+        .svg{
+            display: none;
+        }
+        form{
+            border-radius: 10px;
+        }
+    }
+
+}

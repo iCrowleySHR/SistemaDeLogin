@@ -82,4 +82,13 @@ main .svg {
 main .svg svg {
   justify-self: center;
   width: 80%;
+}
+
+@media screen and (max-width: 558px) {
+  main .svg {
+    display: none;
+  }
+  main form {
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=login.css.map */

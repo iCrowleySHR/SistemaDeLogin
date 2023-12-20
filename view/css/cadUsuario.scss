@@ -63,9 +63,14 @@ main{
         
     }
 }
-@media screen and (max-width:834px) {
-    .svg{
-        display: none;
-        background-color: aqua;
+@media screen and (max-width:558px) {
+    main{
+        .svg{
+            display: none;
+        }
+        form{
+            border-radius: 10px;
+        }
     }
+
 }

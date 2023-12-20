@@ -85,9 +85,11 @@ main form section .olho {
   cursor: pointer;
 }
 
-@media screen and (max-width: 834px) {
-  .svg {
+@media screen and (max-width: 558px) {
+  main .svg {
     display: none;
-    background-color: aqua;
+  }
+  main form {
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=cadUsuario.css.map */
