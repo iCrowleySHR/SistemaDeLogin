@@ -7,7 +7,8 @@
             <span id="error-email"></span>
 
             <label for="senha">Senha</label>
-            <input type="password" name="password" required maxlength="100" autocomplete="current-password" >
+            <input type="password" name="password" id="senha" required maxlength="100" autocomplete="current-password" >
+            <img src="../img/olhoAberto.png" alt="" class="olho">
         <button type="submit" id="btnEnviar">Enviar</button>
     </section>
 </form>

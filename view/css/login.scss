@@ -1,21 +1,66 @@
-form{
-    section{
+@import '_variaveis';
+@import 'btn';
+main{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px 100px 50px;
+    form{
+        background-color: white;
+        color: black;
+        box-shadow: $shadow;
+        width: 330px;
+        height: 600px;
+        border-radius: 10px 0 0 10px;
+        section{
+            display: grid;
+            width: 100%;
+            justify-content: center;
+            margin-top: 45px;
+
+            h2{
+                text-align: center;
+            }
+
+            label{
+                margin: 2px;
+            }
+            input{
+                outline: none;
+                width: 300px;
+                height: 30px;
+                padding-left: 10px; 
+                border-radius: 3px;
+                margin: 0 5px 0 5px
+    
+            }
+            button{
+                @extend .btnPrimary;
+                margin: 5px auto;
+                height: 25px;
+                width: 97%;
+                border-radius: 5px;
+            }
+            .olho{
+                width: 40px;
+                justify-self: flex-end;
+                margin-top: -38px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .svg{
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        margin-top: 45px;
-    }
-    label{
-        margin-left: -130px;
-    }
-    input{
-        outline: none;
-        padding: 7px;
-        border-radius: 3px;
-    }
-    button{
-        width: 187px;
-        margin: 5px;
+        justify-content: center;
+        height: 600px;
+        width: 750px;
+        background-color: black;
+        border-radius: 0 10px 10px 0;
+        svg{
+            justify-self: center;
+            width: 80%;
+        }
     }
 }

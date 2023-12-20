@@ -9,10 +9,11 @@ main{
         align-items: center;
         justify-content: center;
         height: 600px;
+        width: 750px;
         background-color: white;
         border-radius: 10px 0 0 10px;
-        svg{
-            width: 85%;
+        svg{ 
+            width: 80%;
         }
     }
     form{
@@ -27,7 +28,6 @@ main{
             margin-top: 45px;
             width: 330px;
           
-
             h2{
                 white-space: nowrap;
                 overflow: hidden;
@@ -41,6 +41,7 @@ main{
                 width: 95%;
                 height: 30px;
                 border: none;
+                padding-left: 10px; 
                 border-radius: 3px;
                 margin: 2px;
             }
@@ -48,7 +49,7 @@ main{
                 @extend .btnPrimary;
                 margin: 5px 0 0 0;
                 height: 25px;
-                width: 98%;
+                width: 100%;
                 border-radius: 5px;
             }
             .olho{
