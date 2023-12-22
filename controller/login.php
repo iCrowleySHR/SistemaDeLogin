@@ -1,7 +1,6 @@
 <?php
   require_once("bancoConexao.php");
   require("verificaSessao.php");
-  
   if($_SERVER['REQUEST_METHOD'] =='POST'){
     $senhaUsuario = $_POST['password'];
     $email = $_POST['email'];    

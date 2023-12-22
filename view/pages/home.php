@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acessou</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <script defer src="../js/home.js"></script>
+    <link rel="stylesheet" href="view/css/style.css">
+    <link rel="stylesheet" href="view/css/home.css">
+    <script defer src="view/js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <?php require '../components/header.php';?>
-    <?php require '../../controller/home.php' ?>
+    <?php require 'view/components/header.php';?>
+    <?php require 'controller/home.php' ?>
     <main>
         <section class="inicio-infos">
             <h1>
@@ -100,6 +100,6 @@
             }
         ?>
     </main>
-    <?php require '../components/footer.php'; ?>
+    <?php require 'view/components/footer.php'; ?>
 </body>
 </html>

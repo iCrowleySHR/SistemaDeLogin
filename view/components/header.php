@@ -1,5 +1,5 @@
 <header>
-        <a href="../../index.php">
+        <a href="/">
             SISTEMA DE LOGIN
         </a>
 </header>

@@ -1,0 +1,37 @@
+# https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
+# Ativar o módulo Rewrite, que realiza a reescrita de URLs.
+RewriteEngine On
+
+# RewriteCond: Define uma condição para uma regra.
+# REQUEST_FILENAME é o caminho completo do diretório que atende à requisição original, levando em consideração o sistema de arquivos da máquina e não o caminho relativo à hospedagem.
+# RewriteCond %{REQUEST_FILENAME} !-d informa que será criada uma condição a ser aplicada ao nome do diretório requisitado. O sinal de exclamação é usado para negação e -d é utilizado para verificar a existência de um diretório físico. Por exemplo, a condição é a seguinte: SE O ARQUIVO REQUISITADO NÃO EXISTIR COMO DIRETÓRIO FISICAMENTE.
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# RewriteCond %{REQUEST_FILENAME} !-f informa que será criada uma condição a ser aplicada ao nome do arquivo requisitado. O sinal de exclamação é usado para negação e -f é utilizado para verificar a existência de um arquivo físico. Por exemplo, a condição é a seguinte: SE O ARQUIVO REQUISITADO NÃO EXISTIR FISICAMENTE.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# RewriteCond %{REQUEST_FILENAME} !-l informa que será criada uma condição a ser aplicada ao link simbólico requisitado. O sinal de exclamação é usado para negação e -l é utilizado para verificar a existência de um link simbólico.
+RewriteCond %{REQUEST_FILENAME} !-l
+
+# RewriteRule: Faz a reescrita do URL.
+# O circunflexo indica o início e o cifrão indica o fim.
+# (.+) pegar todo o conteúdo da URL.
+# index.php?params=$1 indica para substituir a requisição, redirecionando o fluxo para index.php e passando-o como parâmetro completo.
+# Exemplo: index.php?url=blog/index
+# QSA significa que, se houver uma string de consulta passada com a URL original, ela será anexada à reescrita.
+# Exemplo: blog?situacao=1 será reescrita como index.php?url=blog&p=situacao.
+# O sinalizador [L] faz com que o mod_rewrite interrompa o processamento do conjunto de regras.
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Quando ocorrer o erro 403, redirecione o usuário.
+ErrorDocument 403 https://celke.com.br
+
+# Bloquear a opção de listar os arquivos do diretório.
+Options -Indexes
+
+# Bloquear o acesso ao arquivo .env com o arquivo .htaccess.
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>

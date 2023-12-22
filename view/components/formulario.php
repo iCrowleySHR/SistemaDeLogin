@@ -1,4 +1,4 @@
-<?php include '../../controller/cadUsuario.php'; ?>
+<?php include 'controller/cadastro.php'; ?>
 <form method='post'>
     <section>
         <h2>Cadastre-se no nosso site!</h2>
@@ -11,7 +11,7 @@
 
             <label for="senha">Senha:</label>
             <input type="password" name="password" id='senha' required maxlength="100">
-            <img src="../img/olhoAberto.png" alt="" class="olho">
+            <img src="view/img/olhoAberto.png" alt="" class="olho">
             
         <button type="submit" id="btnEnviar">Enviar</button>
     </section>

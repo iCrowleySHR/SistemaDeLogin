@@ -80,7 +80,7 @@ editarNome.addEventListener('click',()=>{
     input.name='editarNome'
     form.appendChild(input)
 
-    fetch('../../controller/apiUsuario.php', {
+    fetch('controller/apiUsuario.php', {
         method: 'GET',
     })
     .then(response => response.json())

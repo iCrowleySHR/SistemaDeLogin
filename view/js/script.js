@@ -24,11 +24,11 @@ olho = true;
 
 function sistemaOlho(){
     if(olho == true){
-        imgOlho.src='../img/olhoFechado.png'
+        imgOlho.src='view/img/olhoFechado.png'
         inputSenha.type='text'
         olho = false
     }else{
-        imgOlho.src='../img/olhoAberto.png'
+        imgOlho.src='view/img/olhoAberto.png'
         inputSenha.type='password'
         olho = true
     }
