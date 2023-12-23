@@ -24,8 +24,6 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
-# Quando ocorrer o erro 403, redirecione o usuário.
-ErrorDocument 403 https://celke.com.br
 
 # Bloquear a opção de listar os arquivos do diretório.
 Options -Indexes
