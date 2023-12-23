@@ -110,6 +110,9 @@ main .editar-dados form button:hover {
   color: white;
   background-color: rgb(3, 163, 3);
 }
+main .deletar-conta {
+  margin-bottom: 100px;
+}
 main .deletar-conta article form button {
   background-color: #c41414;
 }

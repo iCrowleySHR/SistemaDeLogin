@@ -143,7 +143,7 @@ apagarConta.addEventListener('click', ()=>{
     </section>`
     const btnNaoDeletar = document.querySelector('#nao-deletarConta')
     btnNaoDeletar.addEventListener('click',()=>{
-        location.reload();
+        document.location.assign('http://localhost/github/Login-Formulario/home');
     })
 })
 

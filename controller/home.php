@@ -9,7 +9,7 @@
             switch ($acao) {
                 case 'sair':
                     session_destroy();
-                    header('Location: ../../index.php');
+                    header('Location: URL');
                     break;
 
                 case 'editarEmail':
@@ -48,12 +48,12 @@
                 case "deletarConta":
                     $conexao -> deletarConta($idUsuario);
                     session_destroy();
-                    header("Location: ../../index.php");
+                    header("Location: URL");
                     break;
             }
         }
     } else{
-        header("Location: ../../index.php");
+        header("Location: URL");
         exit();
     }
 

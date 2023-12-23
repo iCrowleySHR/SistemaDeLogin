@@ -17,7 +17,7 @@
           $_SESSION["email"] = $dados["email"];
           $_SESSION["id"] = $dados["codUsuario"];
           
-          header("Location: home.php");
+          header("Location: home");
           exit();
         } else{
             $erroEncontrado = true;

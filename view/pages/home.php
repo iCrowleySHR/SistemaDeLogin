@@ -44,6 +44,7 @@
 
         <?php
             if (isset($emailAlterado) && $emailAlterado == true) {
+                $emailAlterado == false;
                 echo '
             <script>
                 Swal.fire({
@@ -58,6 +59,7 @@
                 ';
             }
             if (isset($nomeAlterado) && $nomeAlterado == true) {
+                $nomeAlterado == false;
                 echo '
             <script>
                 Swal.fire({
