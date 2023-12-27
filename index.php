@@ -1,5 +1,5 @@
 <?php
-    define('URL', 'http://localhost/github/Login-Formulario/');
+    define('URL', 'http://localhost/github/SistemaDeLogin');
 
     $url = explode("/", $_GET['url'] ?? 'index');
     $linkPage = "view/pages/{$url[0]}.php";
