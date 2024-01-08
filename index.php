@@ -1,4 +1,5 @@
 <?php
+    session_start();
     define('URL', 'http://localhost/github/SistemaDeLogin');
 
     $url = explode("/", $_GET['url'] ?? 'index');
@@ -11,6 +12,4 @@
             $linkPage = "view/pages/index.php";
             include ($linkPage);
             exit();
-        } 
-    
-?>
+        }     

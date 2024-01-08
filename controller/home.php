@@ -1,6 +1,5 @@
 <?php
     require_once("bancoConexao.php");
-    session_start();
     if(isset($_SESSION["nome"]) && isset($_SESSION["email"])){
         if($_SERVER['REQUEST_METHOD'] =='POST'){
             $acao = $_POST["acao"];
@@ -9,7 +8,7 @@
             switch ($acao) {
                 case 'sair':
                     session_destroy();
-                    header('Location: URL');
+                    echo "<script>window.location.href = '" . URL . "';</script>";
                     break;
 
                 case 'editarEmail':
@@ -48,13 +47,11 @@
                 case "deletarConta":
                     $conexao -> deletarConta($idUsuario);
                     session_destroy();
-                    header("Location: URL");
+                    echo "<script>window.location.href = '" . URL . "';</script>";
                     break;
             }
         }
     } else{
-        header("Location: URL");
-        exit();
+        echo "<script>window.location.href = '" . URL . "';</script>";
+        die();
     }
-
-?>

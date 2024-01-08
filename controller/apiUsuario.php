@@ -1,7 +1,6 @@
 <?php
 require_once("bancoConexao.php");
 header("Content-Type: application/json");
-session_start();
     if(isset($_SESSION["email"])){
         $email = $_SESSION['email'];
         $sql = "SELECT codUsuario, nome, email FROM usuario where email = '$email'";
@@ -23,7 +22,3 @@ session_start();
         exit();
     }
 
-
-
-
-?>

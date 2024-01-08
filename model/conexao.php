@@ -1,15 +1,15 @@
 <?php 
+include('config.php');
 class conexao{
     private $pdo;
-    public function __construct($dbname, $host, $user, $password) {
+    public function __construct() {
         try {
-            $this -> pdo = New PDO ("mysql:dbname=" . $dbname . ";host=" . $host, $user, $password);
-            return "CONEXÃO DO PDO";
+            $this -> pdo = New PDO ("mysql:dbname=" . dbname . ";host=" . host, user, password);
         } catch (PDOException $erro) {
-            return "ERRO DE CONEXÃO NO PDO:" . $erro -> getMessage();
+            echo "ERRO DE CONEXÃO NO PDO:" . $erro -> getMessage();
             exit();
         } catch (Exception $erro) {
-            return "ERRO NÃO PASSOU DA CONEXÃO:" . $erro -> getMessage();
+            echo "ERRO NÃO PASSOU DA CONEXÃO:" . $erro -> getMessage();
             exit();
         }
     }
