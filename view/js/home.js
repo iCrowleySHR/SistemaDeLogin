@@ -25,7 +25,7 @@ editarEmail.addEventListener('click',()=>{
     label.htmlFor='editarEmail'
     label.textContent='Digite o seu novo email:'
     form.appendChild(label)
-    fetch('../../controller/apiUsuario.php', {
+    fetch('controller/apiUsuario.php', {
         method: 'GET',
     })
     .then(response => response.json())
