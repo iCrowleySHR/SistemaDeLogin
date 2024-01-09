@@ -13,7 +13,7 @@ Este é um projeto de sistema de login que oferece funcionalidades básicas, com
    - A validação garante que as informações sejam únicas e atendam aos padrões de segurança.
 
 2. **Fazer Login:**
-   - Após criar uma conta, os usuários podem fazer login usando seu nome de usuário e senha.
+   - Após criar uma conta, os usuários podem fazer login usando seu email e senha.
    - Credenciais são verificadas para conceder acesso seguro.
 
 3. **Sair:**
